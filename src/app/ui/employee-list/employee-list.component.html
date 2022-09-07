@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Employee list:</h1>
+  <h1>{{ title }}</h1>
   <ul *ngIf="data$ | async as data; else empty">
     <li *ngFor="let employee of data">{{ employee.id }}: {{ employee.name }}. <br><br>Email: <a class="container__mail" href="mailto">{{ employee.email }}</a></li>
   </ul></div>

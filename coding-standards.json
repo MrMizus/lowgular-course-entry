@@ -5,12 +5,18 @@
     "libsFolder": "projects"
   },
   "entities": {
-    "smartComponent": {
-      "id": "smartComponent",
-      "type": "ANGULAR",
+    "component": {
+      "id": "component",
+      "type": "ANGULAR_COMPONENT",
       "suffix": "Component",
       "folder": "ui/$name$",
-      "insideOf": "App"
+      "insideOf": "App",
+      "config": {
+        "stylesExtension": "none",
+        "viewEncapsulation": "Emulated",
+        "selector": "generated",
+        "changeDetectionStrategy": "OnPush"
+      }
     },
     "dataService": {
       "id": "dataService",
@@ -25,15 +31,31 @@
       "suffix": "Model",
       "folder": "model",
       "insideOf": "App"
+    },
+    "response": {
+      "id": "response",
+      "type": "DATA_STRUCTURE",
+      "suffix": "Response",
+      "folder": "services",
+      "insideOf": "App"
     }
   },
   "entityRelations": {
-    "smartComponent": {
+    "component": {
       "httpClient": "CONSTRUCTOR",
-      "dataService": "CONSTRUCTOR"
+      "dataService": "CONSTRUCTOR",
+      "component": "HTML"
     },
     "dataService": {
+      "model": "PARAMETER_AND_RETURN",
+      "response": "PARAMETER_AND_RETURN",
       "httpClient": "CONSTRUCTOR"
+    },
+    "model": {
+      "model": "PROPERTY"
+    },
+    "response": {
+      "response": "PROPERTY"
     }
   }
 }

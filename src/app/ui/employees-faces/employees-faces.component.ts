@@ -12,5 +12,6 @@ import { EmployeeModel } from '../../model/employee.model';
 })
 export class EmployeesFacesComponent {
   constructor(private _employeeService: EmployeeService) { }
+
   data$: Observable<EmployeeModel[] | null> = this._employeeService.getAll();
 }

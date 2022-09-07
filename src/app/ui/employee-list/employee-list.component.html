@@ -1,7 +1,7 @@
 <div class="container">
   <h1>{{ title }}</h1>
   <ul *ngIf="data$ | async as data; else empty">
-    <li *ngFor="let employee of data">{{ employee.id }}: {{ employee.name }}. <br><br>Email: <a class="container__mail" href="mailto">{{ employee.email }}</a></li>
+    <li *ngFor="let employee of data">{{ employee.personalNumber }}: {{ employee.name }}. <br><br>Email: <a class="container__mail" href="mailto">{{ employee.mail }}</a></li>
   </ul></div>
 
 <ng-template #empty> There is no data </ng-template>

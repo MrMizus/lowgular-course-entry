@@ -1,7 +1,0 @@
-<div class="container">
-  <h1>{{ title }}</h1>
-  <ul *ngIf="data$ | async as data; else empty">
-    <li *ngFor="let employee of data">{{ employee.personalNumber }}: {{ employee.name }}. <br><br>Email: <a class="container__mail">{{ employee.mail }} </a><button (click)="remove(employee.personalNumber)">Remove me</button></li>
-  </ul></div>
-
-<ng-template #empty> There is no data </ng-template>

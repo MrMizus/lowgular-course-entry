@@ -3,13 +3,16 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 300px;
+  flex-wrap: wrap;
+  overflow: scroll;
+  margin: 0 80px;
+  max-width: 1200px;
 
   .photos {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 10px;
 
     p {

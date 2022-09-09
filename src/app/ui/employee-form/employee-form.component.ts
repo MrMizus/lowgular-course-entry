@@ -6,6 +6,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
+  styleUrls: ['./employee-form.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -26,7 +27,7 @@ export class EmployeeFormComponent {
   onFormSubmitted(form: CreateEmployeeModel) {
     this._employeeService.create({ name: form.name, age: form.age, salary: form.salary })
       .subscribe({
-        error() {alert("User was seccessfully added to the database. Name: " + form.name + ", Age: " + form.age + ", Salary: " + form.salary);}
+        complete() {alert("User was seccessfully added to the database. Name: " + form.name + ", Age: " + form.age + ", Salary: " + form.salary);}
       });
   }
 }

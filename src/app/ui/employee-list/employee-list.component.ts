@@ -18,7 +18,7 @@ export class EmployeeListComponent {
 
   remove(id: string) {
     this._employeeService.delete(id).subscribe({
-      error() {alert("User was seccessfully removed");}
+      complete() {alert("User was seccessfully removed");}
     });
   }
 }

@@ -6,6 +6,7 @@ import {CreateEmployeeModel} from "../../model/create-employee.model";
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
+  styleUrls: ['./employee-form.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

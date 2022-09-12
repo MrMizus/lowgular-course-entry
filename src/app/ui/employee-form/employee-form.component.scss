@@ -1,31 +1,48 @@
+$main-color: #362417;
+$btn-color: #f1dabf;
+
 .form {
-  position: static;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
   height: 100px;
-  background-color: red;
+  background-color: $main-color;
 
   &__container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 10px;
+
   }
 
-  &__input, &__submit {
+  &__input, &__create{
     width: 160px;
-    margin: 3px;
+    margin: 5px;
     padding: 5px;
-    border: solid 1px black;
+    border: solid 1px #fff;
     border-radius: 5px;
+    background-color: $main-color;
+    color: #fff;
+      &::placeholder {
+        color: #ddd;
+      }
   }
 
-  &__submit {
-    background-color: green;
+  &__create {
+    background-color: $btn-color;
+    color: $main-color;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 }

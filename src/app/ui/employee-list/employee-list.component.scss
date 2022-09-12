@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 0 ;
+  background-color: red;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__employee {
+    width: 170px;
+    height: 190px;
+    padding: 15px;
+    background-color: green;
+  }
+}

@@ -3,6 +3,6 @@
     <input class="form__input" type="text" formControlName="name" placeholder="Name">
     <input class="form__input" type="number" formControlName="age" placeholder="Age">
     <input class="form__input" type="number" formControlName="salary" placeholder="Salary">
-    <input class="form__submit" type="submit" value="Submit" [disabled]="employeeForm.invalid">
+    <button class="form__create" type="submit" [disabled]="employeeForm.invalid">Create</button>
   </form>
 </div>

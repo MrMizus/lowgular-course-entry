@@ -1,7 +1,24 @@
 <div class="list">
   <h1 class="list__title">Employee list</h1>
   <ul class="list__container" *ngIf="data$ | async as data; else empty">
-    <li class="list__employee" *ngFor="let employee of data">{{ employee.id }}: {{ employee.name }} / {{ employee.age }} / {{ employee.salary }} <button (click)="remove(employee.id)">Delete</button></li>
+    <li class="list__employee" *ngFor="let employee of data">
+      <div class="list__btn-bar">
+        <button class="list__remove-btn list__btn" (click)="remove(employee.id)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+        </button>
+        <p class="list__id">{{ employee.id }}</p>
+        <button class="list__photo-btn list__btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        </button>
+        <img class="list__photo" src="{{ employee.img }}" alt="Employee face">
+      </div>
+      <div class="list__text">
+        <p class="list__text-name">{{ employee.name }}</p>
+        <p class="list__text-age"><Span class="list__text-bold">Age:</Span> {{ employee.age }}</p>
+        <p class="list__text-salary"><Span class="list__text-bold">Salary:</Span> {{ employee.salary }} $</p>
+      </div>
+
+    </li>
   </ul>
 
   <ng-template #empty> There is no data </ng-template>

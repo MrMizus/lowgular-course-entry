@@ -19,7 +19,7 @@ export class EmployeeListComponent {
     this._employeesService.delete(id).subscribe(
       {
         complete() {
-          alert("User was successfully remove from database")
+          alert("User was successfully removed from the database")
         }
       }
     );

@@ -16,7 +16,13 @@ export class EmployeeListComponent {
   data$: Observable<EmployeesModel[] | null> = this._employeesService.getAll();
 
   remove(id: string) {
-    this._employeesService.delete(id).subscribe();
+    this._employeesService.delete(id).subscribe(
+      {
+        complete() {
+          alert("User was successfully remove from database")
+        }
+      }
+    );
 
   }
 

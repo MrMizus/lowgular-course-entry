@@ -1,8 +1,8 @@
-<div class="form">
+<div class="p-2 position-sticky top-0 start-0 bg-primary bg-gradient d-flex justify-content-center align-items-center flex-wrap">
   <form class="form__container" [formGroup]="employeeForm" (ngSubmit)="onEmployeeFormSubmitted(employeeForm.value)">
-    <input class="form__input" type="text" formControlName="name" placeholder="Name">
-    <input class="form__input" type="number" formControlName="age" placeholder="Age">
-    <input class="form__input" type="number" formControlName="salary" placeholder="Salary">
-    <button class="form__create" type="submit" [disabled]="employeeForm.invalid">Create</button>
+    <input class="m-1 rounded" type="text" formControlName="name" placeholder="Name">
+    <input class="m-1 rounded" type="number" formControlName="age" placeholder="Age">
+    <input class="m-1 rounded" type="number" formControlName="salary" placeholder="Salary">
+    <button class="m-1 rounded" type="submit" [disabled]="employeeForm.invalid">Create</button>
   </form>
 </div>

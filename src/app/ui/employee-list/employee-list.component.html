@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="list__employee-bot">
-        <strong>{{ employee.name }}</strong>
+        <a routerLink="/employee-details/{{ employee.id }}/{{ employee.name }}">{{ employee.name }}</a>
         <p><Strong>Age:</Strong> {{ employee.age }}</p>
         <p><Strong>Salary:</Strong> {{ employee.salary }} $</p>
       </div>

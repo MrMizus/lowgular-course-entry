@@ -1,8 +1,45 @@
-li {
-  width: 180px;
-  height: 200px;
-  list-style: none;
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 80px 0;
+
+  &__header {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__employees {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__employee {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 180px;
+    height: 200px;
+    border: 2px solid rgb(35, 100, 170);
+    list-style: none;
+
+    &-top {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+
 }
+
+
+
 button {
   width: 30px;
   height: 30px;

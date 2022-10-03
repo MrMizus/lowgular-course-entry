@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {EmployeesServiceModule} from "./services/employees.service-module";
 import {EmployeeListComponentModule} from "./ui/employee-list/employee-list.component-module";
 import {EmployeeFormComponentModule} from "./ui/employee-form/employee-form.component-module";
+import {NavbarComponentModule} from "./ui/navbar/navbar.component-module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import {EmployeeFormComponentModule} from "./ui/employee-form/employee-form.comp
         EmployeesServiceModule,
         EmployeeListComponentModule,
         EmployeeFormComponentModule,
+        NavbarComponentModule,
     ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,89 @@
+$main-color: rgb(35, 100, 170);
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 80px;
+  background-color: #eee;
+  border-bottom: 1px solid $main-color;
+
+  &__header {
+    margin-right: 10vw;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color;
+      border: 3px solid $main-color;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__link {
+    position: relative;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      transition: 0.3s;
+    }
+
+    &::before {
+      top: -2px;
+      left: -2px;
+      border-top: 0 solid $main-color;
+      border-left: 0 solid $main-color;
+    }
+
+    &::after {
+      bottom: -2px;
+      right: -2px;
+      border-bottom: 0 solid $main-color;
+      border-right: 0 solid $main-color;
+    }
+
+    &:hover::after,
+    &:hover::before {
+      width: 80%;
+      height: 80%;
+      z-index: 1;
+    }
+
+    &:hover::before {
+      border-top: 1px solid $main-color;
+      border-left: 1px solid $main-color;
+    }
+
+    &:hover::after {
+      border-bottom: 1px solid $main-color;
+      border-right: 1px solid $main-color;
+    }
+  }
+}

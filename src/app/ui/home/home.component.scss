@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 600px;
+  margin: auto;
+
+  &__header{
+    text-transform: uppercase;
+    margin: 30px;
+    font-weight: bold;
+  }
+}

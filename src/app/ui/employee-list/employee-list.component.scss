@@ -35,6 +35,16 @@
       width: 100%;
     }
   }
+  &__name {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(35, 100, 170);
+
+    &:hover {
+      color: rgb(55, 120, 190);
+    }
+  }
 
 }
 

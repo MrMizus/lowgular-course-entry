@@ -10,7 +10,7 @@ import { EmployeesServiceModule } from './services/employees.service-module';
 import { EmployeeListComponentModule } from './ui/employee-list/employee-list.component-module';
 import { EmployeeDetailsComponentModule } from './ui/employee-details/employee-details.component-module';
 
-const routes: Routes = [{ path: '', component: HomeComponent }, { path: 'create-employee', component: EmployeeFormComponent }, { path: 'employee-list', component: EmployeeListComponent }, { path: 'employee-details/:id/:name', component: EmployeeDetailsComponent }];
+const routes: Routes = [{ path: '', component: HomeComponent }, { path: 'create-employee', component: EmployeeFormComponent }, { path: 'employee-list', component: EmployeeListComponent }, { path: 'employee-details/:id', component: EmployeeDetailsComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), HomeComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, EmployeeListComponentModule, EmployeeDetailsComponentModule],

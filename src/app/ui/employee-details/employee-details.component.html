@@ -1,4 +1,6 @@
-<h1>Employee Details</h1>
-{{ (params$ | async)?.id }}
-<br>
-{{ (params$ | async)?.name }}
+<div class="details">
+  <h1 class="details__header">Employee Details</h1>
+  <p class="details__id">{{ (details$ | async)?.id }}</p>
+  <img class="details__img" src="{{ (details$ | async)?.img }}" alt="employee photo">
+  <p class="details__name">{{ (details$ | async)?.name }}</p>
+</div>

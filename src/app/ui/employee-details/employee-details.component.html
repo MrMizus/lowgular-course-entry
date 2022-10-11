@@ -1,6 +1,6 @@
-<div class="details">
+<div class="details" *ngIf="details$ | async as details">
   <h1 class="details__header">Employee Details</h1>
-  <p class="details__id">{{ (details$ | async)?.id }}</p>
-  <img class="details__img" src="{{ (details$ | async)?.img }}" alt="employee photo">
-  <p class="details__name">{{ (details$ | async)?.name }}</p>
+  <p class="details__id">{{ details.id }}</p>
+  <img class="details__img" src="{{ details.img }}" alt="employee photo">
+  <p class="details__name">{{ details.name }}</p>
 </div>
